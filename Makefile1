@@ -1,0 +1,15 @@
+objs=trie.o trie_impl.o test1.o
+
+test:${objs}
+	g++ ${objs} -o test1 -std=c++11
+
+trie_impl.o:trie_impl.cc trie_impl.h trie.h
+	g++ -c -std=c++11 trie_impl.cc
+trie.o:trie.h trie_impl.h trie.cc
+	g++ -c -std=c++11 trie.cc
+test.o:trie.h trie_impl.h test1.cc
+	g++ -c -std=c++11 test1.cc
+
+.PHONY:clean
+clean:
+	-rm ${objs} test1
