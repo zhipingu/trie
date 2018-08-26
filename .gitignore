@@ -1,7 +1,7 @@
 # Prerequisites
 *.d
 
-# Compiled Object files,add a file
+# Compiled Object files
 *.slo
 *.lo
 *.o
