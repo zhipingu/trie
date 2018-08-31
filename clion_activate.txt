@@ -1,0 +1,49 @@
+ ====================================================
+ =======    Jetbrains License Server Crack    =======
+ =======           https://zhile.io           =======
+ ====================================================
+
+ *** 请先一定仔细阅读本文档！可以参考文件夹内：javaagent_sample.png和address_sample.png ***
+
+ Usage:
+ 0. Download the zip package and get jetbrains-agent.jar first.
+    Releases page: https://zhile.io/files/jetbrains-agent-v2018.2.2.zip
+ 1. Click IDE menu "Configure|Help" -> "Edit Custom VM Options ..."
+ 2. Append "-javaagent:/absolute/path/to/jetbrains-agent.jar" to end line.
+    eg: -javaagent:/Users/neo/jetbrains-agent.jar
+ 3. Restart IDE.
+ 4. Entry license server address: 
+    http://[any exactly 16 characters domain name(without:'/', '[', ']')]
+ 5. If show error msg: 
+    "Error opening zip file or JAR manifest missing : jetbrains-agent.jar"
+    Please modify the jar file path to absolute path.
+ X. Or active with the activation code in the file: ACTIVATION_CODE.txt
+
+
+ 使用方法:
+ 0. 先下载压缩包解压后得到jetbrains-agent.jar，把它放到你认为合适的文件夹内。
+    下载列表地址：https://zhile.io/files/jetbrains-agent-v2018.2.2.zip
+ 1. 点击你要注册的IDE菜单："Configure|Help" -> "Edit Custom VM Options ..."
+    如果提示是否要创建文件，请点"是|Yes"。
+ 2. 在打开的vmoptions编辑窗口末行添加："-javaagent:/absolute/path/to/jetbrains-agent.jar"
+    一定要自己确认好路径，填错会导致IDE打不开！！！最好使用绝对路径。
+    如: -javaagent:/Users/neo/jetbrains-agent.jar
+ 3. 重启你的IDE。
+ 4. 注册选择License server方式，地址填入：
+    http://[随意填一个域名（可胡编乱造），要求正好正好正好16个字符（不要有:'/', '[', ']'）]
+ 5. 如果提示错误: 
+    "Error opening zip file or JAR manifest missing : jetbrains-agent.jar"
+    这种情况请试着填上jar文件的绝对路径.
+ X. 或者使用文件：ACTIVATION_CODE.txt 内的注册码激活。
+
+ ** 未注册IDE找不到Help菜单可选择“试用（Evaluate for free）”后打开主界面。
+
+ 本项目在最新2018.2.2上测试通过。
+ 理论上适用于目前Jetbrains全系列所有新老版本（这句话是瞎说的，如果有不兼容版本请给我issue或进QQ群：30347511讨论）。
+ IDE升级会从旧版本导入以上设置，导入配置后可能提示未注册（因为刚导入的vmoptions未生效），直接重启IDE即可，无需其他操作。
+
+ 本项目只做学习研究之用，不得用于商业用途！
+ 若资金允许，请点击 [https://www.jetbrains.com/idea/buy/] 购买正版，谢谢合作！
+ 学生凭学生证可免费申请 [https://sales.jetbrains.com/hc/zh-cn/articles/207154369-学生授权申请方式] 正版授权！
+ 创业公司可5折购买 [https://www.jetbrains.com/shop/eform/startup] 正版授权！
+
