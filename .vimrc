@@ -146,12 +146,12 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
+""inoremap < <><Esc>i
 inoremap { {<CR>}<Esc>O
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
-inoremap > <c-r>=ClosePair('>')<CR>
+""inoremap > <c-r>=ClosePair('>')<CR>
 inoremap } <c-r>=CloseBracket()<CR>
 inoremap " <c-r>=QuoteDelim('"')<CR>
 inoremap ' <c-r>=QuoteDelim("'")<CR>
@@ -189,7 +189,7 @@ endf
 "设置，后面自动添加空格
 "if exists("g:equ")
 :inoremap = <c-r>=EqualSign('=')<CR>
-:inoremap + <c-r>=EqualSign('+')<CR>
+"":inoremap + <c-r>=EqualSign('+')<CR>
 "":inoremap - <c-r>=EqualSign('-')<CR>
 "":inoremap * <c-r>=EqualSign('*')<CR>
 "":inoremap / <c-r>=EqualSign('/')<CR>
@@ -204,6 +204,9 @@ endf
 :inoremap /= <c-r>=EqualSign('/=')<CR>
 :inoremap >= <c-r>=EqualSign('>=')<CR>
 :inoremap <= <c-r>=EqualSign('<=')<CR>
+:inoremap << <c-r>=EqualSign('<<')<CR>
+:inoremap >> <c-r>=EqualSign('>>')<CR>
+
 :inoremap && <c-r>=EqualSign("&&")<CR>
 :inoremap <Bar><Bar> <c-r>=EqualSign("<Bar><Bar>")<CR>
 "":inoremap \|\\|\ <c-r>=EqualSign("||"")<CR>
