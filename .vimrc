@@ -178,7 +178,7 @@ endf
 :inoremap && <c-r>=EqualSign("&&")<CR>
 :inoremap <Bar><Bar> <c-r>=EqualSign("<Bar><Bar>")<CR>
 "":inoremap \|\\|\ <c-r>=EqualSign("||"")<CR>
-:inoremap % <c-r>=EqualSign('%')<CR>
+"":inoremap % <c-r>=EqualSign('%')<CR>
 :inoremap , ,<space>
 ""endif
 
