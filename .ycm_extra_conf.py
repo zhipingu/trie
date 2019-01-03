@@ -45,20 +45,10 @@ flags = [
 '-isystem',
 '/usr/local/include',
 '-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
-'-isystem',
-'/usr/include',
-'-isystem',
 '/usr/include/c++/5',
 '-isystem',
 '/usr/include',
 '/usr/include/x86_64-linux-gnu/c++'
-'-isystem',
-'/home/zhi/Chromium/src',
-'/home/zhi/hzq/libtrie/include'
-'/home/zhi/hzq/libtrie/src'
 ]
 
 
