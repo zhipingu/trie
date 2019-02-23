@@ -8,7 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 " The following are examples of different formats supported.
@@ -58,6 +58,7 @@ set warn        " 对文本进行了新的修改后，离开shell时系统给出
 set ws               " 在搜索时如到达文件尾则绕回文件头继续搜索
 set wrap       " 长行显示自动折行
 colorscheme evening " 设定背景为夜间模式
+""colorscheme evening " 设定背景为夜间模式
 filetype plugin on        " 自动识别文件类型，自动匹配对应的, “文件类型Plugin.vim”文件，使用缩进定义文件
 "set autoindent            " 设置自动缩进：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
 set cindent                 " 以C/C++的模式缩进
@@ -79,11 +80,25 @@ set guifont=Courier_new:h45:b:cDEFAULT
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 
-let g:syntastic_cpp_include_dirs='~/Chromium/src'
+let g:syntastic_cpp_include_dirs=['/usr/include']
 let g:syntastic_cpp_compiler = 'g++'  "change the compiler to g++ to support c++11
 let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++' "set the options of g++ to suport c++11
 
-set tags=~/work/adblock/tags
+"nerdcommenter
+" :help nerdcommenter for detail
+let mapleader=","
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_cpp = 1
+
 set tags=./tags
 
 :nmap J j
@@ -95,7 +110,8 @@ set tags=./tags
 :nmap L l
 :nmap I i
 :map <c-]> g<c-]>
-:vmap // \c<SPACE>
+:vmap // ,cs
+:vmap uu ,cu
 vmap H h
 vmap J j
 vmap K k
@@ -116,7 +132,7 @@ inoremap " ""<Esc>i
 inoremap ' ''<Esc>i
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
+""inoremap < <><Esc>i
 inoremap { {<CR>}<Esc>O
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
